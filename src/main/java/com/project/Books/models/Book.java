@@ -1,7 +1,5 @@
 package com.project.Books.models;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
 import java.util.Date;
 import java.util.Objects;
 
@@ -13,7 +11,7 @@ import java.util.Objects;
 
 public class Book {
 
-    private Integer id;
+    private static Integer id;
 
     private String tile;
 
@@ -24,6 +22,14 @@ public class Book {
     private Integer pages;
 
     private String ISBN;
+
+    public static void setId() {
+        id++;
+    }
+
+    public static Integer getId() {
+        return id;
+    }
 
     public String getTile() {
         return tile;
@@ -70,8 +76,7 @@ public class Book {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Book book = (Book) o;
-        return Objects.equals(id, book.id) &&
-                Objects.equals(tile, book.tile) &&
+        return Objects.equals(tile, book.tile) &&
                 Objects.equals(author, book.author) &&
                 Objects.equals(published, book.published) &&
                 Objects.equals(pages, book.pages) &&
