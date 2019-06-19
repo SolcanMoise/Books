@@ -11,9 +11,9 @@ import java.util.Objects;
 
 public class Book {
 
-    private static Integer id;
+    private static Integer id = 0;
 
-    private String tile;
+    private String title;
 
     private String author;
 
@@ -31,12 +31,12 @@ public class Book {
         return id;
     }
 
-    public String getTile() {
-        return tile;
+    public String getTitle() {
+        return title;
     }
 
-    public void setTile(String tile) {
-        this.tile = tile;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getAuthor() {
@@ -76,7 +76,7 @@ public class Book {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Book book = (Book) o;
-        return Objects.equals(tile, book.tile) &&
+        return Objects.equals(title, book.title) &&
                 Objects.equals(author, book.author) &&
                 Objects.equals(published, book.published) &&
                 Objects.equals(pages, book.pages) &&
@@ -85,14 +85,14 @@ public class Book {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, tile, author, published, pages, ISBN);
+        return Objects.hash(id, title, author, published, pages, ISBN);
     }
 
     @Override
     public String toString() {
         return "Book{" +
                 "id=" + id +
-                ", tile='" + tile + '\'' +
+                ", title='" + title + '\'' +
                 ", author='" + author + '\'' +
                 ", published=" + published +
                 ", pages=" + pages +

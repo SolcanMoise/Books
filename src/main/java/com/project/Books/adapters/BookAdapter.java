@@ -20,11 +20,11 @@ public class BookAdapter {
         try{
             Book.setId();
 
-            book.setTile(fields[0]);
+            book.setTitle(fields[0]);
 
             book.setAuthor(fields[1]);
 
-            SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy");
+            SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
             Date date = formatter.parse(fields[2]);
             book.setPublished(date);
 
