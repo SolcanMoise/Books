@@ -5,6 +5,7 @@ import java.util.Objects;
 
 /**
  * Represents a book.
+ *
  * @author solcanm
  * @date 16 June 2019
  */

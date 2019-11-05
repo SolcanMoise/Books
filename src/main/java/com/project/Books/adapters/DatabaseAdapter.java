@@ -6,6 +6,7 @@ import java.sql.*;
 
 /**
  * Adapter class for connecting to MySQL database
+ *
  * @author solcanm
  * @date 22 June 2019
  */
@@ -15,6 +16,7 @@ public class DatabaseAdapter {
 
     /**
      * Method to add a new Book to database
+     *
      * @param book - the book to be added to database
      * @return - 1 in case of success, 0 otherwise
      */
@@ -49,8 +51,9 @@ public class DatabaseAdapter {
 
     /**
      * Create a connection to database
+     *
      * @throws ClassNotFoundException - in case that JDBC Driver not found
-     * @throws SQLException - in case that connection with database cannot be established
+     * @throws SQLException           - in case that connection with database cannot be established
      */
     private static void makeJDBCConnection() throws ClassNotFoundException, SQLException {
 

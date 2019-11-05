@@ -8,6 +8,7 @@ import java.util.Date;
 
 /**
  * Adapter class for Book class.
+ *
  * @author solcanm
  * @date 19 June 2019
  */
@@ -17,7 +18,7 @@ public class BookAdapter {
 
         Book book = new Book();
         String[] fields = dates.split(",");
-        try{
+        try {
             Book.setId();
 
             book.setTitle(fields[0]);

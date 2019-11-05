@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * Represents a controller for application
+ *
  * @author solcanm
  * @date 16 June 2019
  */
@@ -20,9 +21,9 @@ public class BookController {
 
     private BookAdapter adapter = new BookAdapter();
 
-    @GetMapping(path="/addNewBook") // Map ONLY GET Requests
+    @GetMapping(path = "/addNewBook") // Map ONLY GET Requests
     public @ResponseBody
-    String addNewBook (@RequestParam String dates) {
+    String addNewBook(@RequestParam String dates) {
 
         Book book = adapter.getBookData(dates);
 
